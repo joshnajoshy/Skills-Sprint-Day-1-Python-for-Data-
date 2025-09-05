@@ -84,7 +84,7 @@ import csv  # -> have to import first
 
 rows = []
 #use open('file name',
-with open('australia.csv', newline='') as csvfile:
+with open('../Day 3/australia.csv', newline='') as csvfile:
     csvreader = csv.reader(csvfile) # -> turns to reader file
     header = next(csvreader) # -> column headers not
     for row in csvreader: # -> looping through data
@@ -98,7 +98,7 @@ data = [['Melbourne'], ['Sydney'], ['Adelaide'], ['Perth'],['Hobart'],['Brisbane
 for index in range(len(rows)):
     rows[index].append(data[index][0])
 
-with open('australia.csv', 'w', newline='') as csvfile:
+with open('../Day 3/australia.csv', 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(header)
     csvwriter.writerows(rows)

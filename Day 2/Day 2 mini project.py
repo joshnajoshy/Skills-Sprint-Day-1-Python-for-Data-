@@ -4,7 +4,7 @@ from functools import reduce
 
 rows = []
 total = 0
-with open('studentgrades.csv', newline='') as csvfile:
+with open('../studentgrades.csv', newline='') as csvfile:
     csvreader = csv.reader(csvfile)
     header = next(csvreader)
     for row in csvreader:
@@ -25,7 +25,7 @@ avarage = math.floor(total / len(rows))
 for row in rows:
     row.append(avarage)
 
-with open('studentgrades.csv', 'w', newline='') as csvfile:
+with open('../studentgrades.csv', 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(header)
     csvwriter.writerows(rows)
